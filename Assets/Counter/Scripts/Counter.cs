@@ -6,12 +6,15 @@ using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
-    public Text CounterText;
+    protected Text CounterText;
+    protected Vector3 initPos;
 
     private int Count = 0;
 
     private void Start()
     {
+        CounterText = FindObjectOfType<Text>();
+        initPos = transform.position;
         Count = 0;
     }
 

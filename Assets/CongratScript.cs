@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CongratScript : MonoBehaviour
@@ -8,7 +9,7 @@ public class CongratScript : MonoBehaviour
     
     private List<string> TextToDisplay;
     
-    private float RotatingSpeed;
+    //private float RotatingSpeed;
     private float TimeToNextText;
 
     private int CurrentText;
@@ -17,9 +18,9 @@ public class CongratScript : MonoBehaviour
     void Start()
     {
         TimeToNextText = 0.0f;
-        CurrentText = 0
+        CurrentText = 0;
         
-        RotatingSpeed = 1.0;
+        //RotatingSpeed = 1.0f;
 
         TextToDisplay.Add("Congratulation");
         TextToDisplay.Add("All Errors Fixed");
@@ -43,7 +44,7 @@ public class CongratScript : MonoBehaviour
             {
                 CurrentText = 0;
 
-
+            }
             Text.text = TextToDisplay[CurrentText];
         }
     }
