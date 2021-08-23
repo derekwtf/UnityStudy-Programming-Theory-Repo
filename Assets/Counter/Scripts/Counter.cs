@@ -9,18 +9,19 @@ public class Counter : MonoBehaviour
     protected Text CounterText;
     protected Vector3 initPos;
 
-    private int Count = 0;
+    //private int Count = 0;
 
     private void Start()
     {
         CounterText = FindObjectOfType<Text>();
-        initPos = transform.position;
-        Count = 0;
+        initPos = transform.position;        
+        //Count = 0;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Count += 1;
-        CounterText.text = "SCORE : " + Count;
+        //Count += 1;
+        GameManager.singleton.UpdateScore(1);
+        CounterText.text = "SCORE : " + GameManager.singleton.GameScore;
     }
 }

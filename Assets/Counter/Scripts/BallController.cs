@@ -11,6 +11,7 @@ public class BallController : MonoBehaviour
     private Vector3 dragReleasePos;
     private BallSpawn ballSpawner;
     [SerializeField] float speed = 15;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +48,8 @@ public class BallController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             ballSpawner.SpawnNewBall();
-            Invoke("DestroyBall", 3.0f);
+            //Invoke("DestroyBall", 3.0f);
+            GameManager.singleton.LifeCheck();
             Destroy(gameObject.GetComponent<BallController>());            
         }
     }

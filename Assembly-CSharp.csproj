@@ -60,6 +60,8 @@
     <Compile Include="Assets\Counter\Scripts\BasketController.cs" />
     <Compile Include="Assets\Counter\Scripts\BasketMoveLeftAndRight.cs" />
     <Compile Include="Assets\Counter\Scripts\BasketMoveRound.cs" />
+    <Compile Include="Assets\Counter\Scripts\MenuUI.cs" />
+    <Compile Include="Assets\Counter\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

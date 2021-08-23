@@ -10,10 +10,13 @@ public class BallSpawn : MonoBehaviour
     private void Start()
     {
         SpawnNewBall();
+        GameManager.singleton.UpdateDifficulty(0);
     }
 
     public void SpawnNewBall()
     {
+        if (GameManager.singleton.IsGameOver) return;
+
         var balls = FindObjectsOfType<BallController>();
         Debug.Log("ball numb: " + balls.Length);
         if (balls.Length < 2)
